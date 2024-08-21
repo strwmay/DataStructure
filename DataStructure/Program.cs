@@ -13,7 +13,7 @@
         fruits.Add("Uva");
 
         // Impressão da Lista em uma Única Linha
-        Console.WriteLine("Minha Lista de Frutas:");
+        Console.WriteLine("Lista de Frutas:");
         fruits.ForEach(Console.WriteLine);
 
         Console.WriteLine(); // Pula linha em branco
@@ -27,7 +27,7 @@
         //Imprimindo a lista novamente
         Console.WriteLine(); //pula linha em branco
 
-        Console.WriteLine("Minha Lista de Frutas:");
+        Console.WriteLine("Lista de Frutas:");
         foreach (string fruit in fruits)
         {
             Console.WriteLine(fruit);
@@ -36,7 +36,7 @@
         fruits.Insert(4, "Pêra");
 
         Console.WriteLine(); //Pula linha em branco
-        Console.WriteLine("Minha Lista de Frutas:");
+        Console.WriteLine("Lista de Frutas:");
         foreach (string fruit in fruits)
         {
             Console.WriteLine(fruit);
@@ -46,5 +46,25 @@
         fruits.Clear();
 
         Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine();
+
+        // Trabalhando com Dicionário (Dictionary)
+        Console.WriteLine("Dicionário de Carros:");
+
+        // Criando um Dicionário de Dados
+        Dictionary<int, string> cars = new Dictionary<int, string>();
+        // Adicionar Dados a um Dicionário
+        cars.Add(5, "Corsa");
+        cars.Add(10, "Fusca");
+        cars.Add(2, "Ford Ka");
+
+        // Imprimir um Dicionário de Dados
+        foreach (var car in cars)
+        {
+
+            Console.WriteLine($"{car.Key} - {car.Value}");
+
+        }
     }
 }
