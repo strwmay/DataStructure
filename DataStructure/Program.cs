@@ -66,5 +66,80 @@
             Console.WriteLine($"{car.Key} - {car.Value}");
 
         }
+
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine();
+
+        // Trabalhando com Fila (Queue)
+        Console.WriteLine("Fila de Carros:");
+
+        // Criar uma Fila
+        Queue<string> bank = new Queue<string>();
+
+        // Adicionar Elementos na Fila
+        bank.Enqueue("André");
+        bank.Enqueue("Maria");
+        bank.Enqueue("João");
+        bank.Enqueue("Bia");
+
+        foreach (var person in bank)
+        {
+            Console.WriteLine(person);
+        }
+
+        // Retirar Primeiro Elemento da Fila
+        bank.Dequeue();
+        Console.WriteLine();
+
+        foreach (var person in bank)
+        {
+
+            Console.WriteLine(person);
+
+        }
+
+        // Verificar se Existe um Elemento na Fila
+        bool find = bank.Contains("Bia");
+        if (find == true)
+        {
+            Console.WriteLine("A Pessoa está na Fila");
+        }
+        else
+        {
+            Console.WriteLine("A Pessoa não está na Fila");
+        }
+
+
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine();
+
+
+        // Trabalhando com Pilha (Stack)
+        Console.WriteLine("Pilha de Livros:");
+
+        // Criando uma Pilha 
+        Stack<string> books = new Stack<string>();
+
+        // Adicionar Elementos a uma Pilha
+        books.Push("Chapéuzinho Vermelho");
+        books.Push("Branca de Neve");
+        books.Push("A Princesa e o Sapo");
+
+        foreach (var book in books)
+        {
+            Console.WriteLine(book);
+        }
+
+        Console.WriteLine();
+
+        // Remove o Primeiro Elemento da Pilha
+        books.Pop();
+        foreach (var book in books)
+        { Console.WriteLine(book); }
+
+        Console.WriteLine();
+
     }
 }
